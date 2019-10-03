@@ -10,7 +10,9 @@ This analysis was tested using six different datasets:
 3. TILs Immunotherapies (Rudqvist): Samples were taken from cohorts of tumor-bearing mice treated with the following immunotherapies: radiotherapy (RT), anti–CTLA-4 (9H10) and a combination of them. 
 
 4. Naïve-memory: Peripheral blood mononuclear cells (PBMC) of three donors were sorted into memory (central memory, CM; effector memory, EM; effector memory RA-expressing revertants, EMRA) and naïve CD4+ and CD8+ populations, alpha and beta chains.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5643411/
 
 5. Vaccine: Yellow fever vaccine (YFV) responding TCRs in three pairs of identical twin donors (P1, P2, Q1, Q2, S1, S2) at different time-points.
+https://www.pnas.org/content/115/50/12704
 
 6. Cancer: A collection of TCRs from hosts with any cancer and healthy hosts downloaded from the Immune Epitope Database (IEDB).
