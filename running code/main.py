@@ -30,25 +30,6 @@ from devidedata2train_test import *
 
 
 def main():
-    """Example function with types documented in the docstring.
-
-       "The function is main executable method to run all functions in the method"
-
-       Describe globaly about operation of function 2-3 sentences
-
-        Args: (input to function)
-        ----
-            example: path_to_csv_ (str): the input of directory that contain files
-            param1 (int): The first parameter.
-            param2 (str): The second parameter.
-
-        Returns: (output to function)
-            bool: The return value. True for success, False otherwise.
-
-        .. _PEP 484:
-            https://www.python.org/dev/peps/pep-0484/
-
-        """
     pass
 
 
@@ -306,7 +287,10 @@ if RUN_SAVE:
                     with open(encoder_dir_to_user + str(s) + '.csv', mode='w') as output_file:
                         output_writer = csv.writer(output_file, delimiter=',')
                         for item in info:
-                            vector, name, _ = item
+                            if F_S != 'None':
+                                vector, name, _ = item
+                            else:
+                                vector, name = item
                             row = list(map(lambda n: '%.8f'%n, vector))
                             row.insert(0, name)
                             output_writer.writerow(row)
@@ -326,7 +310,10 @@ if RUN_SAVE:
                     with open(embedding_dir_to_user + str(s) + '.csv', mode='w') as output_file:
                         output_writer = csv.writer(output_file, delimiter=',')
                         for item in info:
-                            vector, name, _ = item
+                            if F_S != 'None':
+                                vector, name, _ = item
+                            else:
+                                vector, name = item
                             row = list(map(lambda n: '%.8f' % n, vector))
                             row.insert(0, name)
                             output_writer.writerow(row)
@@ -358,7 +345,10 @@ if RUN_SAVE:
                         with open(v_encoder_dir_to_user + str(s) + '.csv', mode='w') as output_file:
                             output_writer = csv.writer(output_file, delimiter=',')
                             for item in info:
-                                vector, name, _ = item
+                                if F_S != 'None':
+                                    vector, name, _ = item
+                                else:
+                                    vector, name = item
                                 row = list(map(lambda n: '%.8f' % n, vector))
                                 row.insert(0, name)
                                 output_writer.writerow(row)
@@ -380,7 +370,10 @@ if RUN_SAVE:
                         with open(v_embedding_dir_to_user + str(s) + '.csv', mode='w') as output_file:
                             output_writer = csv.writer(output_file, delimiter=',')
                             for item in info:
-                                vector, name, _ = item
+                                if F_S != 'None':
+                                    vector, name, _ = item
+                                else:
+                                    vector, name = item
                                 row = list(map(lambda n: '%.8f' % n, vector))
                                 row.insert(0, name)
                                 output_writer.writerow(row)

@@ -31,7 +31,7 @@ def load_n_data(path, p, del_str, aa_str, v_str, f_str):
                 freqs = []
                 for row in reader:
                     if count_rows == 1000000:
-                        print("\nThe input is too large, and was cut")
+                        print("\nThe data was too big and therefore cut short")
                         breaker = True
                         break
                     cdr3 = row[aa_str]
